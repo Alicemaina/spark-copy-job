@@ -1,6 +1,6 @@
 # spark-copy-job
 
-This code will help you batch copy Cassandra tables using Spark Jobs. This code has rate-limiters which will prevent from copying too fast which can take down a cluster. Also, the retry policy is not implemented, as it is left to the implementer to do that. The advantage of using this vs doing a dataframe copy is that you can iterate through particular partition ranges and copy parts of a table slowly. 
+This code will help you batch copy Cassandra tables using Spark Jobs. This code has rate-limiters which will prevent from copying too fast which can take down a cluster. Also, the retry policy is not implemented, as it is left to the implementer to do that. The advantage of using this vs doing a dataframe copy is that you can iterate through particular partition ranges and copy parts of a table slowly (very usefuly for large tables). 
 
 
 To compile the code simply run: "sbt assembly"
